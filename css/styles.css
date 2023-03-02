@@ -42,9 +42,11 @@ body {
 .bd-color-4 {
     color: #8c929b;
 }
+
 .bd-color-5 {
     color: #404143;
 }
+
 .bd-color-6 {
     color: #5c5d61;
 }
@@ -57,13 +59,20 @@ body {
     border-right: 0 !important;
     border-left: 0 !important;
 }
-.bd-hr-line{
+
+.bd-hr-line {
     border-bottom: 3px solid #000000;
 }
-.hvr p:hover{
+
+.hvr p:hover {
     background-color: #FFFFFF;
     cursor: pointer;
 }
+
 input:focus {
-    outline:none;
+    outline: none;
+}
+
+.title-shadow {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }

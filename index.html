@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documents</title>
+    <title>Billionaires Dairy</title>
 
     <!-- css style -->
     <link rel="stylesheet" href="css/styles.css">
@@ -51,28 +51,18 @@
                 <div class="row">
                     <div class="col py-5 ps-5 pe-9">
                         <h5 class="mb-5">Hello, User!</h5>
-                        <div class="d-flex justify-content-between mb-1">
-                            <p class="fw-bold fs-5 m-0">Person</p>
-                            <p class="bd-color-5 fs-5 m-0">Citizenship</p>
-                            <p class="bd-color-5 fs-5 m-0">Industry</p>
-                            <p class="bd-color-5 fs-5 m-0">Rank</p>
-                            <p class="bd-color-5 fs-5 m-0">Wealth</p>
-                        </div>
-                        <div class="bd-hr-line mb-4"></div>
-                        <div class="d-flex justify-content-between">
-                            <p class="bd-color-6">Jeff Bezos</p>
-                            <p class="bd-color-6">United States</p>
-                            <p class="bd-color-6">Technology</p>
-                            <p class="bd-color-6">12</p>
-                            <p class="bd-color-6">$80526.39</p>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p class="bd-color-6">Jeff Bezos</p>
-                            <p class="bd-color-6">United States</p>
-                            <p class="bd-color-6">Technology</p>
-                            <p class="bd-color-6">12</p>
-                            <p class="bd-color-6">$80526.39</p>
-                        </div>
+                        <table id="user-container" class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th class="fw-bold fs-5 m-0" scope="col">Person</th>
+                                    <th class="bd-color-5 fs-5 m-0" scope="col">Citizenship</th>
+                                    <th class="bd-color-5 fs-5 m-0" scope="col">Industry</th>
+                                    <th class="bd-color-5 fs-5 m-0" scope="col">Rank</th>
+                                    <th class="bd-color-5 fs-5 m-0" scope="col">Wealth</th>
+                                </tr>
+                            </thead>
+                        </table>
+
                         <div class="bd-hr-line mt-4"></div>
                         <div class="d-flex justify-content-between mt-1">
                             <p class="fw-bold fs-5 m-0">Total</p>
@@ -85,8 +75,49 @@
         </div>
     </section>
 
+    <section>
+        <div class="modal fade" id="bio" tabindex="-1" aria-labelledby="bioLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body bd-bg-color-1">
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="text-center">
+                            <h1 class="modal-title fs-2 title-shadow" id="bioLabel"></h1>
+                            <h4>Biography</h4>
+                        </div>
+                        <div class="text-justify p-4">
+                            <p id="user-bio-details" class="fs-7"></p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <img class="image-fluid h-25 w-25" src="images/profile.jpeg" alt="">
+                            <div id="general-info">
+                                <h4>General Information</h4>
+                                <p class="lh-1 fw-bold">Citizenship: <span id="citizenship" class="fw-normal"></span></p>
+                                <p class="lh-1 fw-bold">State: <span id="state" class="fw-normal"></span></p>
+                                <p class="lh-1 fw-bold">City: <span id="city" class="fw-normal"></span></p>
+                                <p class="lh-1 fw-bold">Birthday:<span id="birthday" class="fw-normal"></span></p>
+                                <p class="lh-1 fw-bold">Gender:<span id="gender" class="fw-normal mb-3"></span></p>
+
+                                <h4>Financial Information</h4>
+                                <p class="lh-1 fw-bold">Exchange: <span id="exchange" class="fw-normal"></span></p>
+                                <p class="lh-1 fw-bold">Ticker: <span id="ticker" class="fw-normal"></span></p>
+                                <p class="lh-1 fw-bold">Total Shares: <span id="numberOfShares" class="fw-normal"></span></p>
+                                <p class="lh-1 fw-bold">Share Price:<span id="sharePrice" class="fw-normal"></span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- js style -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="api/billionaires.js"></script>
+    <script src="js/single-profile.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
